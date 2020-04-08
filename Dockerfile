@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:7 as builder
 
 ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH \
     PATH=/opt/rh/devtoolset-9/root/bin:$PATH 
@@ -25,5 +25,9 @@ RUN yum install  -y centos-release-scl-rh && \
     make && \
     make install && \
     cp -R /work/PotreeConverter/PotreeConverter/resources /usr/local/bin/resources
+
+FROM centos:7
+ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH 
+COPY --from=builder /usr/local /usr/local
 
 CMD bash

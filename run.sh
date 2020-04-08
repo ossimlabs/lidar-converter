@@ -1,15 +1,24 @@
 #!/bin/sh
 
-rm -rf output
-mkdir output
+INPUT_DIR=`dirname $1`
+INPUT_FILE=`basename $1`
+
+WEB_ROOT_DIR=/opt/local/www/apache2/html/potree
+OUTPUT_DIR=$WEB_ROOT_DIR/${INPUT_FILE%.*}
+
+rm -rf $OUTPUT_DIR
+mkdir -p $OUTPUT_DIR
+
+#ln -s $OUTPUT_DIR $PWD/output
 
 docker run -it --rm  \
--v $PWD/input:/input \
+-v $INPUT_DIR:/input \
 -v $PWD/output:/output \
 potree-centos:latest /usr/local/bin/PotreeConverter \
--i /input/USGS_LPC_MD_VA_Sandy_NCR_2014_18SUJ322306_LAS_2015.las \
+-i /input/$INPUT_FILE \
 -o /output \
 -p index 
 
-rm -rf /opt/local/www/apache2/html/potree/foobar
-cp -R output /opt/local/www/apache2/html/potree/foobar
+#rm $PWD/output
+cp -R $PWD/output/* $OUTPUT_DIR
+rm -rf $PWD/output
