@@ -15,9 +15,12 @@ docker run -it --rm  \
 -v $INPUT_DIR:/input \
 -v $PWD/output:/output \
 potree-centos:latest /usr/local/bin/PotreeConverter \
--i /input/$INPUT_FILE \
--o /output \
--p index 
+--source /input/$INPUT_FILE \
+--outdir /output \
+--generate-page index \
+--material INTENSITY \
+--edl-enabled \
+--output-format LAS
 
 #rm $PWD/output
 cp -R $PWD/output/* $OUTPUT_DIR
