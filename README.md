@@ -15,8 +15,8 @@ LIDAR Test Data:
  To run:
  -  mkdir -p <Apache Document Dir>/potree 
    (If using macports,  that will be:  `/opt/local/www/apache2/html`)
- - chmod 777  <Apache Document Dir>/potree
+ - `chmod 777  <Apache Document Dir>/potree`
  - `./run.sh <Path to unzipped las files>/<las file>.las`
- - Open Web browser to `http://localhost/potgree`. Should see a folder that correspondes to the output
+ - Open Web browser to `http://localhost/potree`. Should see a folder that correspondes to the output
  
  
