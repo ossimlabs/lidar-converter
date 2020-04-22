@@ -6,7 +6,7 @@ LIDAR Test Data:
  - https://potree-test-data.s3.amazonaws.com/USGS_LPC_MD_VA_Sandy_NCR_2014_18SUJ322306_LAS_2015.zip
  - https://potree-test-data.s3.amazonaws.com/YSM06_251259_4171798_LAS.zip
  
- (Don't put these in the project directory was docker will upload them to the docker server on build)
+ (Don't put these in the project directory as docker will upload them to the docker server on build)
  
  To build Image:
  
