@@ -25,9 +25,20 @@ RUN yum install  -y centos-release-scl-rh && \
     make && \
     make install && \
     cp -R /work/PotreeConverter/PotreeConverter/resources /usr/local/bin/resources
-
+    
 FROM centos:7
-ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH 
+
+ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH \
+    HOME=/home/omar
+
 COPY --from=builder /usr/local /usr/local
+
+RUN useradd -u 1001 -r -g 0 --create-home -d $HOME -s /sbin/nologin -c 'Default Application User' omar && \
+    chown 1001:0 -R $HOME && \
+    chmod 777 $HOME
+
+USER 1001
+
+WORKDIR ${HOME}
 
 CMD bash
