@@ -14,7 +14,7 @@ LIDAR Test Data:
 - `./build-docker.sh`
 - `cd ../runtime`
 - `./build-docker.sh`
-- `..`
+- `cd ..`
 
  To run potree:
  -  mkdir -p <Apache Document Dir>/potree 
