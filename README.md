@@ -12,7 +12,7 @@ LIDAR Test Data:
  
 - `cd builder`
 - `./build-docker.sh`
-- `./build-docker.sh`
+- `cd ../runtime`
 - `./build-docker.sh`
 - `..`
 
