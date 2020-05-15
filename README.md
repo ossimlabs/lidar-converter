@@ -10,13 +10,17 @@ LIDAR Test Data:
  
  To build Image:
  
- - `./build.sh`
- 
- To run:
+- `cd builder`
+- `./build-docker.sh`
+- `./build-docker.sh`
+- `./build-docker.sh`
+- `..`
+
+ To run potree:
  -  mkdir -p <Apache Document Dir>/potree 
    (If using macports,  that will be:  `/opt/local/www/apache2/html`)
  - `chmod 777  <Apache Document Dir>/potree`
- - `./run.sh <Path to unzipped las files>/<las file>.las`
+ - `./run-potree.sh <Path to unzipped las files>/<las file>.las`
  - Open Web browser to `http://localhost/potree`. Should see a folder that correspondes to the output
  
  

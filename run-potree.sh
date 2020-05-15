@@ -14,7 +14,7 @@ mkdir -p $OUTPUT_DIR
 docker run -it --rm  \
 -v $INPUT_DIR:/input \
 -v $PWD/output:/output \
-potree-centos:latest /usr/local/bin/PotreeConverter \
+lidar-converter:latest /usr/local/bin/PotreeConverter \
 --source /input/$INPUT_FILE \
 --outdir /output \
 --generate-page index \
