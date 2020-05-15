@@ -23,4 +23,11 @@ LIDAR Test Data:
  - `./run-potree.sh <Path to unzipped las files>/<las file>.las`
  - Open Web browser to `http://localhost/potree`. Should see a folder that correspondes to the output
  
+ To run entwine:
+ -  mkdir -p <Apache Document Dir>/entwine 
+   (If using macports,  that will be:  `/opt/local/www/apache2/html`)
+ - `chmod 777  <Apache Document Dir>/entwine`
+ - `./run-entwine.sh <Path to unzipped las files>/<las file>.las`
+ - Open Web browser to `http://localhost/entwine`. Should see a folder that correspondes to the output
+ 
  
