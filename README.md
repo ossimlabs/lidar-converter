@@ -1,4 +1,4 @@
-# potree-centos
+# lidar-converter
 
 Docker image for running potree
 
