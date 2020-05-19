@@ -14,6 +14,5 @@ cmake3 -G "Unix Makefiles" \
     -DOPENSSL_SSL_LIBRARY=/usr/lib64/openssl11/libssl.so \
     -DCMAKE_BUILD_TYPE=Release ..
 
-make
-make install
+make -j 8 install
 cd /work

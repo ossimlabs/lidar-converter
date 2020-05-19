@@ -6,8 +6,7 @@ cd PotreeConverter
 git checkout tags/1.6
 mkdir build
 cd build
-cmake3  -DCMAKE_BUILD_TYPE=Release -DLASZIP_INCLUDE_DIRS=/usr/local/include/laszip -DLASZIP_LIBRARY=/usr/local/lib/liblaszip.so .. 
-make 
-make install 
+cmake  -DCMAKE_BUILD_TYPE=Release -DLASZIP_INCLUDE_DIRS=/usr/local/include/laszip -DLASZIP_LIBRARY=/usr/local/lib/liblaszip.so .. 
+make -j 8 install 
 cp -R /work/PotreeConverter/PotreeConverter/resources /usr/local/bin/resources
 cd /work

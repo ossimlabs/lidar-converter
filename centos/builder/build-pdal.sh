@@ -31,6 +31,5 @@ cmake3 -G "Unix Makefiles" \
     -DWITH_ZSTD=ON \
     -DCMAKE_BUILD_TYPE=Release ..
 
-make 
-make install 
+make -j 8 install 
 cd /work
