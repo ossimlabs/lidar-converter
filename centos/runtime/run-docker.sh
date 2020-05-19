@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run -it --rm lidar-converter
+docker run -it --rm lidar-converteri-centos

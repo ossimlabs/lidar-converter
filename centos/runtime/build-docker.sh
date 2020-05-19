@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t lidar-converter .
+docker build -t lidar-converter-centos .
