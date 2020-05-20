@@ -1,4 +1,4 @@
-FROM lidar-converter-builder:latest as builder
+FROM lidar-converter-builder-centos:latest as builder
 
 FROM centos:7
 
