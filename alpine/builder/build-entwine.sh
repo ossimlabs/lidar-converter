@@ -15,5 +15,7 @@ cmake -G "Unix Makefiles" \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DCMAKE_BUILD_TYPE=Release ..
 
+sed -i 's/Backtrace_LIBRARY-NOTFOUND//g' CMakeCache.txt
+
 make -j 8 install
 cd /work
