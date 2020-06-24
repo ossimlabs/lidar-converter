@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run -it --rm lidar-converter-alpine
+docker run -it -v $OSSIM_DATA:/input --rm lidar-converter-alpine
